@@ -5,7 +5,11 @@ package.domain = org.collegedemo
 source.dir = .
 source.include_exts = py,kv,png,jpg
 version = 1.0
-requirements = python3,kivy==2.3.1,https://github.com/kivy-garden/zbarcam/archive/refs/heads/master.zip,zbar
+
+# Keep requirements minimal to avoid native packaging problems.
+# Remove zbar / zbarcam from the initial build; the app still works with manual QR input.
+requirements = python3,kivy==2.3.1
+
 orientation = portrait
 fullscreen = 0
 android.permissions = CAMERA
