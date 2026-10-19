@@ -5,7 +5,8 @@ package.domain = org.collegedemo
 source.dir = .
 source.include_exts = py,kv,png,jpg
 version = 1.0
-requirements = python3,kivy==2.3.1,kivy_garden.zbarcam
+# Use explicit versions and a GitHub source for zbarcam to avoid pip resolution issues
+requirements = python3,kivy==2.3.1,https://github.com/kivy-garden/zbarcam/archive/refs/heads/master.zip,zbar
 orientation = portrait
 fullscreen = 0
 android.permissions = CAMERA
